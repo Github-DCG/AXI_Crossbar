@@ -42,9 +42,6 @@ auto_gen_script/axi_interconnect/gen_amba_axi
 *.bak
 *.backup
 
-# ─── OpenROAD 物理实现（独立流程，不在本仓库追踪） ─────────────────────
-physical_implement/
-
 # ─── Synopsys 后端流程（独立于 RTL 仓库，另行管理） ────────────────────
 ic_post_test/
 
