@@ -1,0 +1,254 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 2558 1033 237 1
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/A_IC/A_CICC5901/AXI_prj/axi_crossbar/sim/dump.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1ps
+
+; waveform viewport range
+zoom 0.000000 567620.000000 1p
+cursor 158000.000000
+marker 750000.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 10
+; marker line index
+markerPos 66
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "M_AW" -e FALSE
+activeDirFile "" "/home/ICer/A_IC/A_CICC5901/AXI_prj/axi_crossbar/sim/dump.fsdb"
+addSignal -h 15 /top/dut_inst/AXI_CLK
+addSignal -h 15 -holdScope AXI_RSTn
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_AWID[0:2]
+addSignal -h 15 -UNSIGNED -HEX -holdScope M_AXI_AWADDR[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_AWVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_AWREADY[0:2]
+addSignal -h 15 -holdScope M_AXI_AWBURST[0:2]
+addSignal -h 15 -holdScope M_AXI_AWLEN[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_AWSIZE[0:2]
+addGroup "S_AW" -e FALSE
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/S_AXI_AWID[0:2]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S_AXI_AWADDR[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_AWVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_AWREADY[0:2]
+addSignal -h 15 -holdScope S_AXI_AWLEN[0:2]
+addSignal -h 15 -holdScope S_AXI_AWBURST[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_AWSIZE[0:2]
+addSignal -h 15 /top/dut_inst/fifo_aw_sx[1]/u_fifo_aw_sx/clk
+addGroup "M_WDATA" -e FALSE
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/M_AXI_WID[0:2]
+addSignal -h 15 -holdScope M_AXI_WDATA[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_WVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_WREADY[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_WLAST[0:2]
+addSignal -h 15 -UNSIGNED -BIN /top/intf/M_WLAST[0:2]
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/M_AXI_WSTRB[0:2]
+addGroup "S_WDATA" -e FALSE
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/S_AXI_WID[0:2]
+addSignal -h 15 -holdScope S_AXI_WDATA[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_WREADY[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_WVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_WLAST[0:2]
+addSignal -h 15 -holdScope S_AXI_WSTRB[0:2]
+addGroup "S_B" -e FALSE
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/S_AXI_BID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_BVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_BREADY[0:2]
+addSignal -h 15 -holdScope S_AXI_BRESP[0:2]
+addGroup "M_B" -e FALSE
+addSignal -h 15 /top/dut_inst/fifo_b_sx[2]/u_fifo_b_sx/clk
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/M_AXI_BID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_BVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_BREADY[0:2]
+addSignal -h 15 -holdScope M_AXI_BRESP[0:2]
+addGroup "M_AR"
+addSignal -h 15 /top/dut_inst/AXI_CLK
+addSignal -h 15 /top/assertions/ARESET
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/M_AXI_ARID[0:2]
+addSignal -h 15 -UNSIGNED -HEX -holdScope M_AXI_ARADDR[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_ARVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_ARREADY[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_ARBURST[0:2]
+addSignal -h 15 -UNSIGNED -HEX -holdScope M_AXI_ARLEN[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_ARSIZE[0:2]
+addGroup "S_AR"
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/S_AXI_ARID[0:2]
+addSignal -h 15 -2COMP -HEX -holdScope S_AXI_ARADDR[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_ARVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_ARREADY[0:2]
+addSignal -h 15 -holdScope S_AXI_ARBURST[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_ARLEN[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_ARSIZE[0:2]
+addSignal -h 15 /top/dut_inst/fifo_ar_sx[0]/u_fifo_ar_sx/full
+addSignal -h 15 /top/dut_inst/u_ar_sid_buffer/sid_buffer[0:3]
+addSignal -h 15 -holdScope full
+addSignal -h 15 -UNSIGNED -HEX /top/dut_inst/u_axi_crossbar/u_axi_mtos_s0/u_axi_arbiter_mtos_m3/stateAR[1:0]
+addGroup "S_RDATA"
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/S_AXI_RID[0:2]
+addSignal -h 15 -UNSIGNED -HEX -holdScope S_AXI_RDATA[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_RVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_RREADY[0:2]
+addSignal -h 15 /top/dut_inst/fifo_r_sx[0]/u_fifo_r_sx/full
+addSignal -h 15 /top/dut_inst/fifo_r_sx[1]/u_fifo_r_sx/full
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/S_AXI_RLAST[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope S_AXI_RRESP[0:2]
+addGroup "M_RDATA"
+addSignal -h 15 -UNSIGNED -BIN /top/dut_inst/M_AXI_RID[0:2]
+addSignal -h 15 -UNSIGNED -HEX -holdScope M_AXI_RDATA[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_RVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_RREADY[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_RLAST[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope M_AXI_RRESP[0:2]
+addGroup "ASSERTY_MST" -e FALSE
+addSignal -h 15 /top/assertions/ACLK
+addSignal -h 15 -holdScope MST_AWID[0:2]
+addSignal -h 15 -holdScope MST_AWADDR[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope MST_AWVALID[0:2]
+addSignal -h 15 -UNSIGNED -BIN -holdScope MST_AWREADY[0:2]
+addSignal -h 15 -holdScope MST_AWBURST[0:2]
+addSignal -h 15 -holdScope MST_AWLEN[0:2]
+addSignal -h 15 -holdScope MST_AWSIZE[0:2]
+addGroup "def_slv" -e FALSE
+addSignal -h 15 /top/dut_inst/u_axi_crossbar/u_axi_default_slave/ACLK
+addSignal -h 15 -holdScope AWID[7:0]
+addSignal -h 15 -holdScope AWADDR[31:0]
+addSignal -h 15 -holdScope AWVALID
+addSignal -h 15 -holdScope AWREADY
+addSignal -h 15 -holdScope AWBURST[1:0]
+addSignal -h 15 -holdScope AWLEN[7:0]
+addSignal -h 15 -holdScope AWSIZE[2:0]
+addSignal -h 15 -holdScope WID[7:0]
+addSignal -h 15 -holdScope WDATA[31:0]
+addSignal -h 15 -holdScope WVALID
+addSignal -h 15 -holdScope WREADY
+addSignal -h 15 -holdScope WLAST
+addSignal -h 15 -holdScope BID[7:0]
+addSignal -h 15 -holdScope WSTRB[3:0]
+addSignal -h 15 -holdScope BVALID
+addSignal -h 15 -holdScope BREADY
+addSignal -h 15 -holdScope BRESP[1:0]
+addSignal -h 15 -holdScope ARADDR[31:0]
+addSignal -h 15 -holdScope ARBURST[1:0]
+addSignal -h 15 -holdScope ARESETn
+addSignal -h 15 -holdScope ARID[7:0]
+addSignal -h 15 -holdScope ARLEN[7:0]
+addSignal -h 15 -holdScope ARVALID
+addSignal -h 15 -holdScope ARREADY
+addSignal -h 15 -holdScope ARSIZE[2:0]
+addSignal -h 15 -holdScope RDATA[31:0]
+addSignal -h 15 -holdScope RID[7:0]
+addSignal -h 15 -holdScope RLAST
+addSignal -h 15 -holdScope RVALID
+addSignal -h 15 /top/dut_inst/fifo_aw_mx[1]/u_fifo_aw_mx/rd_rdy
+addSignal -h 15 /top/dut_inst/fifo_aw_sx[1]/u_fifo_aw_sx/full
+addSignal -h 15 -holdScope Mem[0:3]
+addSignal -h 15 -holdScope full
+addSignal -h 15 -holdScope wr_rdy
+addSignal -h 15 -holdScope rd_rdy
+addSignal -h 15 /top/dut_inst/u_axi_crossbar/u_axi_default_slave/RREADY
+addSignal -h 15 -holdScope RRESP[1:0]
+addGroup "G14"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/ICer/A_IC/A_CICC5901/AXI_prj/axi_crossbar/sim/dump.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/_$novas_unit__1"
+"/top"
+"/top/assertions"
+"/top/dut_inst"
+"/top/dut_inst/fifo_ar_sx[0]"
+"/top/dut_inst/fifo_ar_sx[0]/u_fifo_ar_sx"
+"/top/dut_inst/fifo_aw_mx[0]"
+"/top/dut_inst/fifo_aw_mx[0]/u_fifo_aw_mx"
+"/top/dut_inst/fifo_aw_mx[1]"
+"/top/dut_inst/fifo_aw_sx[1]"
+"/top/dut_inst/fifo_r_sx[0]"
+"/top/dut_inst/fifo_r_sx[1]"
+"/top/dut_inst/u_ar_sid_buffer"
+"/top/dut_inst/u_axi_crossbar"
+"/top/dut_inst/u_axi_crossbar/u_axi_default_slave"
+"/top/dut_inst/u_axi_crossbar/u_axi_mtos_s0"
+"/top/intf"
+"/uvm_custom_install_recording"
+"/uvm_custom_install_verdi_recording"
+
+SCOPE_LIST_BEGIN
+"/_$novas_unit__1"
+"/_vcs_msglog"
+"/top"
+"/top/dut_inst"
+"/top/intf"
+"/uvm_custom_install_recording"
+"/uvm_custom_install_verdi_recording"
+"/uvm_custom_install_verdi_recording/Unnamed_$uvm_custom_install_verdi_recorder_sv_156"
+"/uvm_custom_install_verdi_recording/Unnamed_$uvm_custom_install_verdi_recorder_sv_208"
+"/uvm_custom_install_verdi_recording/Unnamed_$uvm_custom_install_verdi_recorder_sv_208/Unnamed_$uvm_custom_install_verdi_recorder_sv_221"
+"/uvm_pkg"
+"/uvm_custom_install_recording/Unnamed_$uvm_custom_install_vcs_recorder_sv_71"
+"/top/dut_inst/fifo_b_sx[0]"
+"/top/dut_inst/fifo_b_sx[1]"
+"/top/dut_inst/fifo_b_sx[2]"
+"/top/dut_inst/fifo_b_sx[0]/u_fifo_b_sx"
+"/top/dut_inst/fifo_b_sx[1]/u_fifo_b_sx"
+"/top/dut_inst/fifo_b_sx[2]/u_fifo_b_sx"
+"/top/assertion_control"
+"/top/assertions"
+"/top/dut_inst/u_axi_crossbar"
+"/top/dut_inst/u_axi_crossbar/u_axi_default_slave"
+"/top/dut_inst/fifo_aw_mx[0]"
+"/top/dut_inst/fifo_aw_mx[0]/u_fifo_aw_mx"
+"/top/dut_inst/fifo_ar_mx[1]"
+"/top/dut_inst/fifo_aw_mx[1]"
+"/top/dut_inst/fifo_aw_mx[1]/u_fifo_aw_mx"
+"/top/dut_inst/fifo_aw_sx[1]"
+"/top/dut_inst/fifo_aw_sx[1]/u_fifo_aw_sx"
+"/top/dut_inst/fifo_r_sx[1]/u_fifo_r_sx"
+"/top/dut_inst/fifo_ar_sx[0]"
+"/top/dut_inst/fifo_ar_sx[0]/u_fifo_ar_sx"
+"/top/dut_inst/fifo_r_sx[1]"
+"/top/dut_inst/u_aw_sid_buffer"
+"/top/dut_inst/u_ar_sid_buffer"
+"/top/dut_inst/fifo_r_sx[0]/u_fifo_r_sx"
+"/top/dut_inst/u_axi_crossbar/u_axi_mtos_s0"
+"/top/dut_inst/u_axi_crossbar/u_axi_mtos_s0/u_axi_arbiter_mtos_m3"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
